@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test13.html</title>
+  <script>
+    'use strict'
+    function calc() {
+      let op = prompt("사용 하실 연산자를 입력하세요 + - * /");
+      let su1 = prompt("첫번째 수를 입력 하세요.");
+      let su2 = prompt("두번째 수를 입력 하세요.");
+      let res = eval(su1 + op + su2);
+      let temp = su1 + op + su2 + " = ";
+      alert("출력 결과 \n " + temp + res + "입니다.");
+      let ans = confirm("작업을 계속할까요?")
+    }
+    if (ans) {
+      alert("작업을 계속 합니다.");
+    }
+    else {
+      alert("작업을 종료 합니다.");
+    }
+  </script>
+</head>
+
+<body>
+  <h2>두수를 입력하여 사칙연산 계산하기</h2>
+  <form>
+    <p>
+      첫번째 수 : <input type="number" name="su1" value="0"/><br/>
+      연산자 : <input type="text" name="op" value="+" />
+      두번째 수 : <input type="number" name="su2" value="0"/><br/>
+      <input type="button" value="계산" onclick="calc()" />
+    </p>
+  </form>
+</body>
+
+</html>

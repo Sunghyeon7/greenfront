@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test10.html</title>
+  <script>
+    'use strict';
+
+    let su2 = 100;
+    console.log("1.su2 = " + (su2 += 100));
+    console.log("1.typeof(su) = " + typeof (su2));
+    {
+      console.log("2.su2 = " + (su2 += 100));
+    }
+    console.log("3.su2 = " + (su2 += 100));
+
+    {
+    let su3 = 100;
+      console.log("2.su3 = " + (su3 += 100));
+    }
+    // console.log("3.su3 = " + (su3 += 100));
+    const su4 = 100;
+    // console.log("su4 = " + (su4 += 100));
+
+    // su5 = 500; 선언 후에 사용 할수 있다 (use strict)
+    // console.log("su5 = " + (su5+=100));
+
+
+  </script>
+</head>
+
+<body>
+  <h2>자바스크립트</h2>
+</body>
+
+</html>

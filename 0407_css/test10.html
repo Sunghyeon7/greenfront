@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test10.html</title>
+    <style>
+        li{
+            list-style: none;
+            line-height: 30px;
+        }    
+        a {
+            color: blue;
+            text-decoration: none;            /*밑줄 지우기*/
+        }
+        a:hover{
+            color: magenta;
+            text-decoration: underline;       /* 마우스를 올렸을떄 색상, 밑줄 생성*/
+        }
+        a:active{
+            color: red;
+            text-decoration: overline;         /* 클릭할때 색상, 윗줄생성*/
+        }
+        .ap{
+            color: blue;
+            text-decoration: underline;
+        }
+        .ap:hover{
+            cursor: pointer;
+            color: chocolate;
+        }
+    </style>
+
+</head>
+<body>
+    <h2>a 태그 속성변경</h2>
+    <div>
+        <ul>
+            <li><a href="https://naver.com">Naver</a></li>
+            <li><a href="https://www.imbc.com">MBC</a></li>
+            <li><a href="https://www.daum.net">다음</a></li>
+            <li><a href="test9.html">test9.html</a></li>
+            <li><a href="../images/1.jpg">멋진그림</a></li>
+        </ul>
+    </div>
+    <hr/>
+    <p class="ap">1.CSS 학습</p>
+    <p>2.CSS 학습</p>
+    
+</body>
+</html>

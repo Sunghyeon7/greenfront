@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+ul,
+.container {
+  list-style-type: none;
+  padding: 0px;
+  border: 2px solid green;
+
+  display: grid;
+  height: 500px;
+  /*
+  grid-template-columns: 100px 1fr 1fr;
+  grid-template-rows: 200px 1fr 1fr;
+
+  gap : 20px 10px;
+  */
+  /* grid-template-columns: repeat(3,1fr); 3x3 비율 같음 */
+  grid-template-columns: repeat(1,minmax(100px,auto)); 
+  grid-template-rows: repeat(3,1fr); 
+  /*2개열의 최소크기를 100px로 설정 100px밑으로 줄어들면 사이드바가 생김*/
+
+  gap: 10px; /*사이 공백*/
+}
+
+li {
+  display: flex;
+  background-color: steelblue;
+  justify-content: center;
+  align-items: center;
+}
+
+li:nth-child(2n) {
+  background-color: gray;
+}
