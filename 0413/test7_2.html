@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test7_2.html</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function calc() {
+      let str = '<table class="table table-bordered table-hover">'
+      for (let i = 0; document.getElementsByName("product").length; i++) {
+        
+      }
+
+
+      demo.innerHTML = su;
+    }
+  </script>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <h2>삼성전자 가전 제품</h2>
+  <form name="myform">
+    <table class="table bg-dark">
+      <th>상품1 <input type="text" name="product" value="냉장고" /> </th>
+      <th>가격1 <input type="number" name="price" value="1600000" /> </th>
+      <br />
+    </table>
+
+    <table class="table bg-dark">
+      <th>상품2 <input type="text" name="product" value="오디오" /> </th>
+      <th>가격2 <input type="number" name="price" value="999000" /> <br /></th>
+    </table>
+
+    <table class="table bg-dark">
+      <th>상품3 <input type="text" name="product" value="OLED TV" /></th>
+      <th>가격3 <input type="number" name="price" value="3200000" /> <br /></th>
+    </table>
+    <table class="table bg-dark">
+      <th>상품4 <input type="text" name="product" value="무풍 에어컨" class=""/></th>
+      <th>가격4 <input type="number" name="price" value="2800000" /> <br /></th>
+    </table>
+    <table class="table bg-dark">
+      <th>상품5 <input type="text" name="product" value="세탁기 x 건조기" /></th>
+      <th>가격5 <input type="number" name="price" value="3700000" /> <br /></th>
+    </table>
+    <input type="button" value="계산" onclick class="btn btn-primary" /> <br />
+    <!-- <button type="button" onclick="calc()">계산</button> -->
+  </form>
+  <hr />
+
+  <div id="demo"> </div>
+
+</body>
+
+</html>
