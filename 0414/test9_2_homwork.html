@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test9_2_text.html</title>
+  <script>
+    'use strict';
+
+    function newWindow() {
+      let url = "test9_child.html";
+      let winName = "winName";        //생략 가능
+      let winWidth = 600;
+      let winHeight = 400;
+      let x = (screnn.width / 2) - (winWidth / 2);
+      let y = (screen.height / 2) - (winHeight / 2);
+      let opt = "width=" + winWidth + " ,height=" + winHeight + ",left=" + x + ", top=" + y;
+      window.open(url, winName, opt);
+    }
+  </script>
+</head>
+
+<body>
+  <h2> 새창 띄우기 (window.open()) </h2>
+  <p><b>가로 크기 입력(px)</b>  <input type="text" name="content" id="content" /></p>
+  <p><b>세로 크기 입력(px)</b>  <input type="text" name="content" id="content" /></p>
+  <input type="button" value="새창 띄우기" onclick="newWindow()" />
+  <hr />
+  <pre>
+    텍스트 박스에 새로 띄어줄 윈도우의 '가로크기'와 '세로크기'를 입력 받는다.
+    새 윈도우는 화면 중앙에 띄울수 있게한다
+    만약 새 윈도우의 폭이 300px이내면 최소 300px로,
+                  높이가 200px 이내면 최소 200px로 처리하고
+    또한, 윈도우의 가로크기만 입력하였을 경우는 세로 크기는 윈도우의 2/3 크기로,
+    윈도우의 세로크기만 입력하였을 경우는 가로 크기는 윈도우의 3/2 크기로 띄우기
+
+  </pre>
+</body>
+
+</html>

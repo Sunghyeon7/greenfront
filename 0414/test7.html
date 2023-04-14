@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test7.html</title>
+  <script>
+    'use strict';
+    function fCheck() {
+      alert(" 환영 합니다. ");
+    }
+    
+    function newWindow(){
+      // window.open(URL, windowName, option);
+
+      let url = "https://www.naver.com";
+      let winName = "winName";        //생략 가능
+      // let opt = "width= 600px, height= 480px"
+      // let opt = "width= 600px, height= 480px, left=500px, top=300px scrolling=auto, resize=no";
+      let opt = "fullscreen=yes, scrolling=auto, resize=yes";
+      window.open(url, winName, opt);
+    }
+  </script>
+</head>
+
+<body onload="onLoadFunc()" onunload="onunLoadFunc()">
+  <h2> 새창 띄우기 (window.open()) </h2>
+  <input type="button" value="새창 띄우기" onclick="newWindow()" />
+</body>
+
+</html>

@@ -24,10 +24,31 @@ function fCheck2() {
 
   const startDate = new Date(start);
   const endDate = new Date(end);
-  let lemp;
+  let temp;
 
   if (isSameDay(startDate, endDate)) temp = "같다.";
     else temp = "다르다."
-
+    
+    demo.innerHTML = "비교한 날짜는" + temp;
 }
+  function isSameDay(starDate, endDate){
+    return startDate.getFullYear() === endDate.getFullYear()&&
+    starDate.Date.getMonth() === endDate.getMonth() &&
+    starDate.getDate() === endDate.getDate()
+  }
 
+  // 날짜비교하기(경과돈 시간으로 비교하기)
+  function fCheck3() {
+    let start = document.getElementById("date1").value;
+    let end = document.getElementById("date2").value;
+  
+    const startDate = new Date(start);
+    const endDate = new Date(end);
+
+    // getTime() : 1/1000초
+    let temp = endDate.getTime() - startDate.getTime();
+    temp = temp / (60*60*24*1000)  // 결과값=getTime을 '일'단위로 
+    // temp = temp / (60*60*1000)  // 결과값=getTime을 '시간'단위로 
+
+      demo.innerHTML = "비교한 날짜는" + temp.toFixed(0) + "일 차이가 납니다."
+  }
