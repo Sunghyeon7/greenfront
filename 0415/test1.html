@@ -23,14 +23,19 @@
       name: '홍길동',
       age: 25,
       color: 'white',
-      brithday: new Date(),
+      birthday: new Date(),
       size: null,
       gender: true,
-      atom: () => {
+      atom : () => {          // 함수는 독립적 개체이므로 함수를 따로 사용해야 출력됨.
         console.log("성명 : ", Member.name);
       }
-    } // 함수는 독립적 개체이므로 함수를 따로 사용해야 출력됨.
-
+    }
+    console.log("name : " + Member.name);
+    console.log("생일 : " + Member.birthday);
+    console.log("생일(날짜) : " + Member.birthday.getDate() + "일");
+    console.log("atom함수 호출 : " + Member.atom());
+    console.log();
+    
     // 3. object를 json포멧형식 변환
     json = JSON.stringify(Member);
     console.log(json);
@@ -48,6 +53,27 @@
     console.log(json);
     console.log();
 
+
+    // 4. JSON 형식의 자료를 Object형식으로 변환 : 파싱(passing)
+    let obj = JSON.parse(json);
+    console.log(obj);
+    console.log();
+    
+    console.log(obj.name);
+    console.log(obj.age);
+    console.log(obj.color);
+    console.log(obj.birthday);
+    // console.log(obj.birthday.getDate());
+    console.log();
+    console.log();
+    
+    const obj2 = JSON.parse(json, (key, value) => {
+      
+      // return key,value;
+      return key == 'birthday' ? new Date(value) : value;
+    });
+    console.log(obj2);
+    console.log(obj2.birthday.getDate() + "일");
   </script>
 </head>
 
